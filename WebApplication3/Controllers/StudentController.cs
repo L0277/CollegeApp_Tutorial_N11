@@ -1,19 +1,17 @@
-﻿
+﻿using Microsoft.AspNetCore.Mvc;
 
-using Microsoft.AspNetCore.Mvc;
-using WebApplication3;
-
-namespace CollegeApp.Controllers
+namespace WebApplication3.Controllers
 {
-    [Microsoft.AspNetCore.Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
 
     public class StudentController : ControllerBase
     {
         [HttpGet]
-        public IEnumerable<Student> GetStudent()
+        public string GetStudents()
         {
-            return CollegeRepository.Students;
+            return "This returns a list of students";
+            
         }
     }
 }
