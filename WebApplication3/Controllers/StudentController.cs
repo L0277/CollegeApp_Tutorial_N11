@@ -8,9 +8,14 @@ namespace WebApplication3.Controllers
     public class StudentController : ControllerBase
     {
         [HttpGet]
-        public string GetStudents()
+        public List<Student> GetStudents()
         {
-            return "This returns a list of students";
+            return new List<Student>
+            {
+                new Student { StudentID = 1, StudentName = "Ram", StudentAddress = "Kathmandu"  },
+                new Student { StudentID = 2, StudentName = "Sita", StudentAddress = "Bhaktapur"  },
+                new Student { StudentID = 3, StudentName = "Shyam", StudentAddress = "Lalitpur"  }
+            };
             
         }
     }
